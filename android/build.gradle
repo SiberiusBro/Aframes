@@ -1,0 +1,21 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+implementation "com.google.accompanist:accompanist-pager:0.30.1"
+implementation "com.google.accompanist:accompanist-pager-indicators:0.30.1"
