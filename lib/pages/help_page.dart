@@ -27,7 +27,7 @@ class HelpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: custom_back(
         title: 'Help',
         onBack: () => Navigator.pop(context),
       ),

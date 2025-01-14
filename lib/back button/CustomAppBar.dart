@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class custom_back extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final VoidCallback onBack;
 
-  const CustomAppBar({
+  const custom_back({
     super.key,
     required this.title,
     required this.onBack,

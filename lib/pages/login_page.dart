@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: custom_back(
         title: 'Login',
         onBack: () => Navigator.pop(context),
       ),

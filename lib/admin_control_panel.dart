@@ -6,10 +6,9 @@ import 'back button/CustomAppBar.dart';
 class AdminControlPanel extends StatelessWidget {
   const AdminControlPanel({super.key});
 
-  // Function to open GPS location
   Future<void> _openMap() async {
-    const latitude = 45.09220837714519; // Example latitude
-    const longitude = 24.366372986649264; // Example longitude
+    const latitude = 45.09220837714519;
+    const longitude = 24.366372986649264;
     final googleMapsUrl =
         'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
     if (await canLaunch(googleMapsUrl)) {
@@ -22,7 +21,7 @@ class AdminControlPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: custom_back(
         title: 'Admin Control Panel',
         onBack: () => Navigator.pushReplacement(
           context,
